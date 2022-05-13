@@ -1,0 +1,148 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Master Data</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item">Master Data </li>
+            <li class="breadcrumb-item active">Kartu Keluarga</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+
+      <!-- /.row -->
+      <!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12 connectedSortable">
+          <!-- Custom tabs (Charts with tabs)-->
+          <div class="card">
+            <div class="card-header">
+              <div class="float-right">
+                <button onclick="add()" class="btn btn-info btn-sm btn-icon-split">
+                  <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                  </span>
+                  <span class="text">Tambah Data</span>
+                </button>
+                <button onclick="refresh()" class="btn btn-primary btn-sm btn-icon-split">
+                  <span class="icon text-white-50">
+                    <i class="fas fa-sync-alt"></i>
+                  </span>
+                  <span class="text">Refresh</span>
+                </button>
+              </div>
+              <h4 class="card-title m-0 font-weight-bold text-primary">
+                List Kartu Keluarga
+              </h4>
+            </div><!-- /.card-header -->
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="table_kk" width="100%" cellspacing="0">
+                  <thead>
+                    <tr class="text-center">
+                      <th>No</th>
+                      <th>No Kartu Keluarga</th>
+                      <th>Kepala Keluarga</th>
+                      <th>Status Kartu Keluarga</th>
+                      <th>Opsi</th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="text-center">
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- /.card-body -->
+          </div>
+
+          <!-- /.card -->
+
+          <!-- Modal -->
+          
+          <!-- Modal -->
+        </section>
+        <!-- /.Left col -->
+        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- Bootstrap modal -->
+<div id="modal_form" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+			<form id="form">
+            <div class="modal-body">
+                    <input type="hidden" value="" name="id" />
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>No Kartu Keluarga</label>
+                                    <input name="no_kk" id="no_kk" placeholder="No Kartu Keluarga" class="form-control" type="numeric">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Kepala Keluarga</label>
+                                    <input name="kepala_keluarga" id="kepala_keluarga" placeholder="Nama Kepala Keluarga" class="form-control" type="text">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Status Tinggal KK</label>
+                                    <select name="status_kk" id="status_kk" class="form-control">
+                                    <option value="">Pilih Status</option>
+                                    <option value="1">Tetap</option>
+                                    <option value="2">Kontrak</option>
+                                    <option value="3">Pindah</option>
+                                    </select>                                    
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+  
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnSave" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>                             Save
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                <i class="fas fa-times"></i>                    Close
+                </button>
+            </div>
+			</form>
+        </div>
+
+    </div>
+</div>
+<!-- /.modal -->
+<!-- End Bootstrap modal -->

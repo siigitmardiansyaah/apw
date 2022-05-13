@@ -1,0 +1,5 @@
+LOGIN ADMIN
+localhost/apw/login_admin/
+
+username : admin
+password : admin
